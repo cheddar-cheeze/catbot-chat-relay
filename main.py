@@ -3,8 +3,8 @@ import getpass
 import telegram_wrapper
 import csv
 
-chat_id = '-1001203927071'
-bot = telegram_wrapper.Client(token='615458962:AAHyh-VyEa-FZoMgnrLDGUfiuP3e_bc33D4')
+chat_id = ''
+bot = telegram_wrapper.Client(token='')
 while True:
     try:
         for line in tailer.follow(open('/opt/cathook/data/chat-' + getpass.getuser() + '.csv')):
