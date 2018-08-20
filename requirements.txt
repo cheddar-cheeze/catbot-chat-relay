@@ -1,2 +1,2 @@
 tailer
-requests
+python-telegram-bot
