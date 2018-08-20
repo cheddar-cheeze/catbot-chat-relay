@@ -1,5 +1,4 @@
 import tailer
-import getpass
 import requests
 from telegram.ext import Updater, CommandHandler
 import csv
