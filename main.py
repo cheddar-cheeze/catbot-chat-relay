@@ -25,7 +25,7 @@ def say(bot, update, args):
                       'cmd': 'say "[RELAY]' + user_name + ": " + message + '"'
                   })
     print(user_name + ' sent "' + message + '" to catbot ' + args[0])
-    bot.send_message(chat_id=update['message']['chat']['id'], text='message sent')
+    bot.send_message(chat_id=update['message']['chat']['id'], text='message sent!')
 
 def sayall(bot, update, args):
     message = ' '.join(str(x) for x in args)
