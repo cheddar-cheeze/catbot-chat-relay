@@ -73,11 +73,14 @@ def relay(bot ,job):
 def message_send(bot, job):
     if message_queue[:]:
         print("Sending Messages!")
-        cleaned_queue = set(message_queue)
-        for message in cleaned_queue:
-            bot.send_message(chat_id='-1001203927071', text=message, parse_mode='MARKDOWN', disable_web_page_preview=True, disable_notification=True)
-        del message_queue[:]
-        print("Messages Sent!")
+        try:
+            cleaned_queue = set(message_queue)
+            for message in cleaned_queue:
+                bot.send_message(chat_id='-1001203927071', text=message, parse_mode='MARKDOWN', disable_web_page_preview=True, disable_notification=True)
+            del message_queue[:]
+            print("Messages Sent!")
+        except Exception as e:
+            print(e)
 
 dispatcher.add_handler(CommandHandler("start", start))
 dispatcher.add_handler(CommandHandler("say", say, pass_args=True))
